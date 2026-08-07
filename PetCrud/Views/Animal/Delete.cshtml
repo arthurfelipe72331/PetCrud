@@ -1,0 +1,55 @@
+﻿@model PetCrud.Models.Animal
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="modal fade" id="modalDeletar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="IdAnimal" />
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Deletar Animal</h5>
+                    <a asp-action="Index" class="btn-close"></a>
+                </div>
+
+                <div class="modal-body">
+                    <p class="text-danger fw-bold">Você tem certeza que quer deletar isso?</p>
+                    <dl class="row mb-0">
+                        <dt class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.Nome)
+                        </dd>
+                        <dt class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.Idade)
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.Idade)
+                        </dd>
+                        <dt class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.raca)
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.raca)
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="modal-footer">
+                    <a asp-action="Index" class="btn btn-secondary">Voltar à lista</a>
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        new bootstrap.Modal(document.getElementById('modalDeletar')).show();
+    </script>
+}

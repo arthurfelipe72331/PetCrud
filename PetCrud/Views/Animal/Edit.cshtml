@@ -1,0 +1,65 @@
+﻿@model PetCrud.Models.Animal
+
+@{
+    ViewData["Title"] = "Editar Animal";
+}
+
+
+<div class="modal fade" id="modalEditar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalEditarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form asp-action="Edit" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarLabel">Editar Animal</h5>
+                
+                    <a asp-action="Index" class="btn-close" aria-label="Close"></a>
+                </div>
+
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <input type="hidden" asp-for="IdAnimal" />
+
+                    <div class="mb-3">
+                        <label asp-for="Nome" class="form-label"></label>
+                        <input asp-for="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Idade" class="form-label"></label>
+                        <input asp-for="Idade" class="form-control" />
+                        <span asp-validation-for="Idade" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="raca" class="form-label"></label>
+                        <input asp-for="raca" class="form-control" />
+                        <span asp-validation-for="raca" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+              
+                    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+     
+        document.addEventListener("DOMContentLoaded", function () {
+            var modalElement = document.getElementById('modalEditar');
+            var modal = new bootstrap.Modal(modalElement);
+            modal.show();
+        });
+    </script>
+}
