@@ -1,7 +1,3 @@
-
-
-
-
 🏥 PetCrud
 
 Sistema desenvolvido em ASP.NET Core MVC utilizando a linguagem C# e o padrão arquitetural Model-View-Controller (MVC).
@@ -78,14 +74,20 @@ DataTables
 
 Tela Inicial
 
-
+![Tela Inicial](imagens/tela-inicial.png)
 
 Lista de Pets
 
 
+![Lista de Pets](imagens/lista-pets.png)
 
 Cadastro de Pet
 
+![Cadastro de Pet](imagens/cadastro-pet.png)
+
+Edição de Pets
+
+![Edição de Pet](imagens/editar-pet.png)
 
 
 ▶️ Como Executar o Projeto
