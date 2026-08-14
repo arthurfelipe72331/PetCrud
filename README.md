@@ -74,20 +74,20 @@ DataTables
 
 Tela Inicial
 
-![Tela Inicial](imagens/tela-inicial.png)
+![Tela Inicial](PetCrud/imagens/tela-inicial.png)
 
 Lista de Pets
 
 
-![Lista de Pets](imagens/lista-pets.png)
+![Lista de Pets](PetCrud/imagens/lista-pets.png)
 
 Cadastro de Pet
 
-![Cadastro de Pet](imagens/cadastro-pet.png)
+![Cadastro de Pet](PetCrud/imagens/cadastro-pet.png)
 
 Edição de Pets
 
-![Edição de Pet](imagens/editar-pet.png)
+![Edição de Pet](PetCrud/imagens/editar-pet.png)
 
 
 ▶️ Como Executar o Projeto
